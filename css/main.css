@@ -1,0 +1,260 @@
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("../fonts/proxima/proximanova-light.ttf") format("truetype");
+}
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.row {
+    color: #878686;
+    margin: 0 auto;
+}
+
+/* the Perks title */
+
+body .title {
+    text-align: center;
+    padding: 0;
+    font-size: 21px;
+    position: relative;
+}
+
+body .title::before,
+body .title::after {
+    content: '';
+    position: absolute;
+    width: 25%;
+    border-top: 1px solid #878686;
+    top: 10px;
+}
+
+body .title::before {
+    left: 0;
+}
+
+body .title::after {
+    right: 0;
+}
+
+/* images */
+
+.real-show {
+    background: url("../img/realShow.png") no-repeat;
+}
+
+.dream-dress {
+    background: url("../img/dreamDress.png") no-repeat;
+}
+
+.long-dress {
+    background: url("../img/dressLong.png") no-repeat -85px 0;
+    height: 570px;
+}
+
+.what-new {
+    background: url("../img/what-new.png") no-repeat;
+}
+
+.incentive {
+    background: url("../img/incentive.png") no-repeat;
+}
+
+.bride {
+    background: url("../img/bride.png") no-repeat;
+    opacity: 0.7;
+}
+
+.ladies {
+    background: url("../img/ladies.png") no-repeat;
+}
+
+.party {
+    background: url("../img/party.png") no-repeat;
+}
+
+.rose {
+    background: url("../img/rose.png") no-repeat;
+}
+
+/* cells, cell title and cell content alignment */
+
+.cell {
+    min-height: 280px;
+    min-width: 280px;
+    width: 280px;
+    border: 1px solid #878686;
+    border-bottom: none;
+}
+
+.cell div {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cell-title {
+    font-family: "Proxima Nova";
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 21px;
+    padding-top: 22%;
+}
+
+.cell-text,
+.title {
+    font-family: "Lora";
+    font-size: 15px;
+    font-style: italic;
+    padding-top: 6%;
+}
+
+.real-show .cell-title,
+.what-new .cell-title,
+.what-new .cell-text,
+.incentive .cell-title {
+    max-width: 170px;
+}
+
+.real-show .cell-text {
+    max-width: 142px;
+}
+
+.dream-dress .cell-title,
+.dream-dress .cell-text {
+    max-width: 180px;
+}
+
+.incentive .cell-text,
+.party .cell-text {
+    max-width: 190px;
+}
+
+/* phones with small screens */
+@media screen and (max-width: 300px) {
+    .container,
+    .row {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* phones */
+@media screen and (max-width: 479px) {
+
+    .row {
+        width: 280px;
+    }
+
+    .ladies,
+    .rose,
+    .party {
+        display: none;
+    }
+
+    .cell.bride {
+        border-bottom: 1px solid #878686;
+    }
+}
+
+/* phones landscape */
+@media screen and (min-width: 480px) {
+
+    .row,
+    body .title {
+        max-width: 434px;
+    }
+
+    .cell {
+        min-height: 218px;
+        min-width: 218px;
+        width: 218px;
+    }
+
+    .cell:not(.real-show) {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: -5px;
+    }
+
+    body .cell.long-dress {
+        margin-top: -218px;
+        height: 436px;
+    }
+
+    .cell.rose,
+    .cell.bride {
+        border-bottom: 1px solid #878686;
+    }
+
+}
+
+/* tablets */
+@media screen and (min-width: 768px) {
+
+    .row,
+    body .title {
+        max-width: 650px;
+    }
+
+    .cell.what-new {
+        margin-top: -218px;
+    }
+
+    .cell.rose {
+        display: none;
+    }
+
+    .cell.incentive {
+        float: right;
+        margin-top: -218px;
+        margin-right: -1px;
+        border-left: none;
+    }
+
+    .cell.party,
+    .cell.ladies {
+        border-bottom: 1px solid #878686;
+    }
+
+    body .title::before,
+    body .title::after {
+        width: 35%;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1024px) {
+
+    .row,
+    body .title {
+        max-width: 837px;
+    }
+
+    .cell {
+        min-height: 280px;
+        min-width: 280px;
+        width: 280px;
+    }
+
+    .cell.what-new,
+    body .cell.long-dress,
+    .cell.incentive {
+        margin-top: -280px;
+    }
+
+    body .cell.long-dress {
+        height: 560px;
+    }
+
+    .ladies,
+    .party {
+        background-size: 280px;
+    }
+}
